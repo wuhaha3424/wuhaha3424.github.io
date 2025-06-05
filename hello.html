@@ -1,1 +1,236 @@
-hello
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴俊然 - 软件开发实习生简历</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .tagline {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        .info-group {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+        .section {
+            background-color: white;
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        .section-title {
+            font-size: 22px;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        .item {
+            margin-bottom: 25px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+        .item-title {
+            font-size: 18px;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .item-time {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        .details {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-left: 20px;
+        }
+        .skill-list li {
+            padding: 5px 12px;
+            background-color: #e8f4ff;
+            border-radius: 4px;
+            color: #2980b9;
+            font-size: 15px;
+        }
+        .award {
+            margin-top: 15px;
+            font-size: 15px;
+            color: #34495e;
+        }
+        .divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 20px 0;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .item-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .item-time {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">吴俊然</div>
+        <div class="tagline">2026届 | 软件开发实习生</div>
+        <div class="info-group">
+            男 | 24岁 | 实习时长：5天/周，6个月 | 入职时间：一周之内<br>
+            电话：17855241759（微信同号） | 邮箱：wujunran3424@163.com
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">教育经历</h2>
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">天津大学</div>
+                <div class="item-time">2023.9-2026.6</div>
+            </div>
+            <div class="details">
+                电子信息 | 硕士<br>
+                <span class="award">
+                    发表SCI二区论文1篇、专利4项（3项发明、1项实用新型）、国际会议论文1篇、CET-6<br>
+                    天津大学学业一等奖学金、“挑战杯”竞赛全国一等奖(负责人)、“互联网+”竞赛全国金奖
+                </span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">天津科技大学</div>
+                <div class="item-time">2019.9-2023.6</div>
+            </div>
+            <div class="details">机械电子工程 | 本科</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">专业技能</h2>
+        <ul class="skill-list">
+            <li>C++（类封装/继承/多态、C++11、STL）</li>
+            <li>Python/Java（基础应用）</li>
+            <li>数据结构与算法</li>
+            <li>操作系统（进程/线程）</li>
+            <li>计算机网络（HTTP/TCP协议）</li>
+            <li>Linux系统 & Shell脚本</li>
+            <li>Git版本控制</li>
+            <li>MySQL/Redis数据库</li>
+            <li>Docker/gRPC/Protobuf</li>
+            <li>Qt/Pygame开发</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">科研课题</h2>
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">实时游戏交互的踝关节康复系统开发</div>
+                <div class="item-time">2024.12 - 2025.3</div>
+            </div>
+            <div class="details">
+                研究生课题<br>
+                - 完成踝关节外骨骼硬件设计，集成IMU、sEMG、FSR传感器实现多模态数据采集<br>
+                - 基于Ubuntu系统，使用Pygame框架开发康复训练图形化软件，支持账号登录及sqlite3数据库用户数据存储<br>
+                - 采用面向对象编程及多线程技术，开发三种游戏化康复训练模式，支持CSV格式数据导出
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">项目经历</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">基于Linux的轻量级Web服务器开发</div>
+                <div class="item-time">2024.6 - 2024.9 | 独立开发</div>
+            </div>
+            <div class="details">
+                - 基于C/C++在Linux系统开发轻量级Web服务器，支持GET/POST请求及静态资源访问<br>
+                - 使用线程池（半同步/半反应堆模式）、epoll、Proactor模式处理并发事件<br>
+                - 通过互斥锁/条件变量/信号量实现线程同步，提升运行效率<br>
+                - 利用epoll实现I/O多路复用，有限状态机解析HTTP报文<br>
+                - 使用SIGALRM信号管理非活动连接，管道通知主循环处理定时器<br>
+                <span class="skill-tag">技术栈：C++、线程池、epoll、Socket通信、Linux、MySQL</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">基于Linux的分布式性能分析监控系统开发</div>
+                <div class="item-time">2024.10 - 2024.12 | 独立开发</div>
+            </div>
+            <div class="details">
+                - 基于C++在Linux系统开发分布式监控系统，支持跨平台部署及实时性能监控<br>
+                - 采用Docker+CMake实现容器化部署，gRPC构建服务端-客户端架构<br>
+                - 通过Protobuf序列化传输数据，实时采集CPU/内存/网络等指标<br>
+                - 结合Qt开发可视化界面，动态刷新数据并支持stress压测验证<br>
+                <span class="skill-tag">技术栈：C++、Docker、gRPC、Protobuf、CMake、Qt</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">实习经历</h2>
+        <div class="item">
+            <div class="item-header">
+                <div class="item-title">天控智能装备有限公司</div>
+                <div class="item-time">2024.12-2025.3 | 软件开发实习生</div>
+            </div>
+            <div class="details">
+                - 多语言开发：嵌套哈希表动态解析文本资源，键值映射实现实时切换，降低维护成本<br>
+                - APK签名优化：开发ps1脚本替代Java工具链，基于哈希算法实现签名，减少环境依赖<br>
+                - STEP文件解析：集成开源三方库并通过CMake封装至内部类，提升模块可维护性
+            </div>
+        </div>
+    </div>
+</body>
+</html>
