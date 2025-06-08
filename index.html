@@ -6,341 +6,395 @@
     <meta name="description" content="吴俊然个人简历，包含教育经历、获奖情况、专业技能、实习经历及科研成果等详细信息">
     <meta name="keywords" content="吴俊然,个人简历,机械电子工程,电子信息,康复外骨骼,管道机器人">
     <title>吴俊然个人简历</title>
-    <style>
-        :root {
-            --primary-color: #1a73e8;
-            --secondary-color: #f5f7fa;
-            --text-color: #2d3748;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a73e8',
+                        secondary: '#f5f7fa',
+                        text: '#2d3748',
+                    },
+                    fontFamily: {
+                        sans: ['Microsoft YaHei', 'sans-serif'],
+                    },
+                }
+            }
         }
-
-        .info-list {
-            padding-left: 0;
-            list-style: none;
-        }
-        .info-list dt {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        .info-list dd {
-            margin-left: 0;
-            margin-bottom: 0.5rem;
-        }
-        .award-list {
-            padding-left: 20px;
-            line-height: 1.8;
-        }
-        .award-list li {
-            margin-bottom: 0.8rem;
-        }
-
-        body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .photo-container {
-            width: 200px;
-            height: 260px;
-            margin: 20px auto;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .photo-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        h2 {
-            color: #1a73e8;
-            border-bottom: 2px solid #1a73e8;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        .section {
-            margin-bottom: 25px;
-        }
-        .info-list {
-            list-style: none;
-            padding: 0;
-        }
-        .info-list li {
-            margin-bottom: 10px;
-        }
-        .award-list, .skill-list, .experience-list {
-            list-style: none;
-            padding-left: 20px;
-        }
-        .award-list li, .skill-list li, .experience-list li {
-            margin-bottom: 8px;
-        }
-        .table-container {
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        table th, table td {
-            padding: 8px;
-            border: 1px solid #ddd;
-        }
-        table th {
-            background-color: #f5f7fa;
-            text-align: left;
-        }
-        .project-item {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        .tech-stack {
-            color: #007bff;
-            font-size: 0.95em;
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-title {
+                @apply text-primary font-bold text-xl mb-3 border-b-2 border-primary pb-1 flex items-center;
+            }
+            .section-content {
+                @apply mb-6 ml-1;
+            }
+            .item-title {
+                @apply font-semibold text-lg mb-1;
+            }
+            .item-subtitle {
+                @apply text-gray-600 text-sm mb-2;
+            }
+            .item-details {
+                @apply text-gray-700 mb-3;
+            }
+            .tech-stack {
+                @apply text-primary text-sm font-medium mt-2;
+            }
+            .info-row {
+                @apply flex items-center mb-2;
+            }
+            .info-label {
+                @apply font-medium w-20;
+            }
+            .timeline-item {
+                @apply relative pl-6 mb-4;
+            }
+            .timeline-dot {
+                @apply absolute left-0 top-1.5 w-3 h-3 rounded-full bg-primary;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="header">
-        <h1>吴俊然个人简历</h1>
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/wuhaha3424/wuhaha3424.github.io/main/images/%E8%AF%81%E4%BB%B6%E7%85%A7.webp" alt="吴俊然证件照">
+<body class="bg-gray-50 text-gray-800 max-w-4xl mx-auto px-4 py-6 font-sans">
+    <header class="text-center mb-8">
+        <h1 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-2">吴俊然个人简历</h1>
+        <div class="w-48 h-64 mx-auto mb-4 overflow-hidden rounded-lg shadow-lg">
+            <img src="images/证件照.webp" alt="吴俊然证件照" class="w-full h-full object-cover">
         </div>
-    </div>
+    </header>
 
-    <div class="section">
-        <h2>基本信息</h2>
-        <dl class="info-list">
-            <dt>性别</dt><dd>男</dd>
-            <dt>年龄</dt><dd>24岁</dd>
-            <dt>联系方式</dt><dd>电话<a href="tel:17855241759">17855241759</a>（微信同号），邮箱<a href="mailto:wujunran3424@163.com">wujunran3424@163.com</a></dd>
-            <dt>籍贯</dt><dd>安徽省·六安市</dd>
-        </dl>
-    </div>
+    <main class="bg-white rounded-lg shadow-md p-6">
+        <!-- 基本信息 -->
+        <section class="mb-8">
+            <h2 class="section-title"><i class="fa fa-user mr-2"></i>基本信息</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="info-row">
+                    <span>电话：<a href="tel:17855241759" class="text-primary hover:underline">17855241759</a>（微信同号）</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label"></span>
+                    <span>邮箱：<a href="mailto:wujunran3424@163.com" class="text-primary hover:underline">wujunran3424@163.com</a></span>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>教育经历</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>时间</th>
-                        <th>院校</th>
-                        <th>专业</th>
-                        <th>学历</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2023.09-2026.06</td>
-                        <td>天津大学</td>
-                        <td>电子信息</td>
-                        <td>硕士</td>
-                    </tr>
-                    <tr>
-                        <td>2019.09-2023.06</td>
-                        <td>天津科技大学</td>
-                        <td>机械电子工程</td>
-                        <td>本科</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <ul class="info-list">
-            <li><strong>专业排名</strong>：1/140(本科)</li>
-            <li><strong>英语水平</strong>：通过CET-4与CET-6</li>
-        </ul>
-    </div>
+        <!-- 教育经历 -->
+        <section class="mb-8">
+            <h2 class="section-title"><i class="fa fa-graduation-cap mr-2"></i>教育经历</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">时间</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">院校</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">专业</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">学历</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-4 py-3 text-sm">2023.09-2026.06</td>
+                            <td class="px-4 py-3 text-sm">天津大学</td>
+                            <td class="px-4 py-3 text-sm">电子信息</td>
+                            <td class="px-4 py-3 text-sm">硕士</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 text-sm">2019.09-2023.06</td>
+                            <td class="px-4 py-3 text-sm">天津科技大学</td>
+                            <td class="px-4 py-3 text-sm">机械电子工程</td>
+                            <td class="px-4 py-3 text-sm">本科</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-3 flex justify-between flex-wrap gap-x-6 px-40">
+                <div class="flex items-center">
+                    <i class="fa fa-trophy text-yellow-500 mr-1"></i>
+                    <span class="text-sm">专业排名：1/140(本科)</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fa fa-language text-blue-500 mr-1"></i>
+                    <span class="text-sm">英语水平：通过CET-4与CET-6</span>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>获奖经历</h2>
-        <ol class="award-list">
-            <li><strong>第十七届“挑战杯”大学生课外学术科技作品竞赛全国一等奖</strong>（国家级，排名第一）</li>
-            <li><strong>第八届中国国际“互联网+”大学生创新创业大赛全国金奖、全国银奖</strong>（排名第一）</li>
-            <li><strong>2021中美青年创客大赛总决赛全国一等奖</strong>（国家级，排名第二）</li>
-            <li><strong>全国大学生数学建模竞赛天津市二等奖</strong>（省部级，排名第二）</li>
-            <li><strong>中国大学生自强之星</strong>（国家级荣誉称号，2021）</li>
-            <li><strong>天津市大学生创新创业特等奖</strong>（全校1人，2021）</li>
-        </ol>
-    </div>
+        <!-- 获奖经历 -->
+        <section class="mb-8">
+            <h2 class="section-title"><i class="fa fa-award mr-2"></i>获奖经历</h2>
+            <ul class="space-y-3">
+                <li class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span class="font-medium">第十七届“挑战杯”大学生课外学术科技作品竞赛全国一等奖</span>
+                        <span class="text-sm text-gray-500 ml-2">（国家级，排名第一）</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span class="font-medium">第八届中国国际“互联网+”大学生创新创业大赛全国金奖、全国银奖</span>
+                        <span class="text-sm text-gray-500 ml-2">（排名第一）</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span class="font-medium">2021中美青年创客大赛总决赛全国一等奖</span>
+                        <span class="text-sm text-gray-500 ml-2">（国家级，排名第二）</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span class="font-medium">全国大学生数学建模竞赛天津市二等奖</span>
+                        <span class="text-sm text-gray-500 ml-2">（省部级，排名第二）</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span class="font-medium">中国大学生自强之星</span>
+                        <span class="text-sm text-gray-500 ml-2">（国家级荣誉称号，2021）</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span class="font-medium">天津市大学生创新创业特等奖</span>
+                        <span class="text-sm text-gray-500 ml-2">（全校1人，2021）</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-    <div class="section">
-        <h2>专业技能</h2>
-        <ul class="skill-list">
-            <li><strong>机械设计软件</strong>：熟练使用Creo，SolidWorks，AutoCAD等，具有机械设计的相关知识。</li>
-            <li><strong>有限元分析软件</strong>：熟悉使用ABAQUS，Ansys等，可对零部件结构进行力学分析及结构优化。</li>
-            <li><strong>编程语言</strong>：熟悉C/C++/Python等编程语言，了解C++类的封装继承多态、C++11新特性、STL常用容器，了解Java。</li>
-            <li><strong>软件开发</strong>：熟悉Linux操作系统、shell、git等，具备MySQL和Redis的基础使用能力，了解数据库操作；熟悉操作系统进程、线程等，熟悉计算机网络模型，了解HTTP、TCP协议。</li>
-        </ul>
-    </div>
+        <!-- 专业技能 -->
+        <section class="mb-8">
+            <h2 class="section-title"><i class="fa fa-cogs mr-2"></i>专业技能</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">机械设计软件</h3>
+                    <p class="text-sm text-gray-700">熟练使用Creo，SolidWorks，AutoCAD等，具有机械设计的相关知识。</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">有限元分析软件</h3>
+                    <p class="text-sm text-gray-700">熟悉使用ABAQUS，Ansys等，可对零部件结构进行力学分析及结构优化。</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">编程语言</h3>
+                    <p class="text-sm text-gray-700">熟悉C/C++/Python等编程语言，了解C++类的封装继承多态、C++11新特性、STL常用容器，了解Java。</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">软件开发</h3>
+                    <p class="text-sm text-gray-700">熟悉Linux操作系统、shell、git等，具备MySQL和Redis的基础使用能力，了解数据库操作；熟悉操作系统进程、线程等，熟悉计算机网络模型，了解HTTP、TCP协议。</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>实习经历</h2>
-        <div class="experience-list">
-            <div>
-                <h3>杭州海康威视数字技术股份有限公司（萤石网络）</h3>
-                <ul>
-                    <li><strong>时间</strong>：2023.2-2023.5</li>
-                    <li><strong>岗位</strong>：结构设计实习生</li>
-                    <li><strong>工作内容</strong>：
-                        <ul>
-                            <li>协助工程师进行洗地机器人的结构方案分析并使用Creo进行部分机构的设计与改进。</li>
-                            <li>负责对同类竞品进行深入性拆解分析并撰写相关分析报告给相关工程师进行参考。</li>
-                            <li>负责手板制作进度跟进及试装验证，参与样机的多项功能测试及撰写相关测试报告。</li>
-                        </ul>
-                    </li>
+        <!-- 实习经历 -->
+        <section class="mb-8">
+            <h2 class="section-title"><i class="fa fa-briefcase mr-2"></i>实习经历</h2>
+            
+            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                <div class="flex flex-wrap justify-between items-start mb-3">
+                    <h3 class="item-title">杭州海康威视数字技术股份有限公司（萤石网络）</h3>
+                    <span class="item-subtitle">2023.2-2023.5 | 结构设计实习生</span>
+                </div>
+                <ul class="list-disc pl-5 text-sm space-y-1">
+                    <li>协助工程师进行洗地机器人的结构方案分析并使用Creo进行部分机构的设计与改进。</li>
+                    <li>负责对同类竞品进行深入性拆解分析并撰写相关分析报告给相关工程师进行参考。</li>
+                    <li>负责手板制作进度跟进及试装验证，参与样机的多项功能测试及撰写相关测试报告。</li>
                 </ul>
             </div>
-
-            <div>
-                <h3>天控智能装备有限公司</h3>
-                <ul>
-                    <li><strong>时间</strong>：2024.12-2025.3</li>
-                    <li><strong>岗位</strong>：软件开发实习生</li>
-                    <li><strong>工作内容</strong>：
-                        <ul>
-                            <li>多语言开发：采用嵌套哈希表结构动态解析多语言文本资源，通过键值映射实现实时切换，降低维护复杂度。</li>
-                            <li>APK签名优化：开发ps1脚本通过哈希算法实现APK签名，替代Java工具链，降低环境依赖与项目复杂度。</li>
-                            <li>基于开源三方库实现STEP文件解析，通过CMake集成三方库并封装数据至内部类，提升模块可维护性。</li>
-                        </ul>
-                    </li>
+            
+            <div class="bg-gray-50 rounded-lg p-4">
+                <div class="flex flex-wrap justify-between items-start mb-3">
+                    <h3 class="item-title">天控智能装备有限公司</h3>
+                    <span class="item-subtitle">2024.12-2025.3 | 软件开发实习生</span>
+                </div>
+                <ul class="list-disc pl-5 text-sm space-y-1">
+                    <li>多语言开发：采用嵌套哈希表结构动态解析多语言文本资源，通过键值映射实现实时切换，降低维护复杂度。</li>
+                    <li>APK签名优化：开发ps1脚本通过哈希算法实现APK签名，替代Java工具链，降低环境依赖与项目复杂度。</li>
+                    <li>基于开源三方库实现STEP文件解析，通过CMake集成三方库并封装数据至内部类，提升模块可维护性。</li>
                 </ul>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="section">
-        <h2>科研课题</h2>
-        <div class="experience-list">
-            <div>
-                <h3>轻量化电机直驱踝关节康复外骨骼系统开发</h3>
-                <ul>
-                    <li><strong>时间</strong>：2024.12-2025.3</li>
-                    <li><strong>项目性质</strong>：研究生课题</li>
-                    <li><strong>项目背景</strong>：对接西部多家医院需求，旨在设计兼具轻量化、功能性与用户友好性的踝关节康复外骨骼系统。</li>
-                    <li><strong>核心开发内容</strong>：
-                        <ul>
-                            <li><strong>硬件设计</strong>：
-                                <ul>
-                                    <li>选用高功率密度电机，采用碳纤维与尼龙材质，实现整机重量仅<strong>600g</strong>的可穿戴步行助力外骨骼结构。</li>
-                                    <li>集成多模态生物信号采集模块：包含IMU（惯性测量单元）、sEMG（表面肌电）、FSR（力敏电阻），支持实时生理数据采集。</li>
-                                    <li>人因工程优化：腿部护托高度可调，足托采用内衬于鞋内的适配方案，覆盖<strong>6岁以上群体</strong>穿戴需求。</li>
-                                </ul>
-                            </li>
-                            <li><strong>软件开发</strong>：
-                                <ul>
-                                    <li>嵌入式系统：完成外骨骼电路设计与嵌入式软件开发，实现硬件设备的驱动与数据交互。</li>
-                                    <li>图形化康复平台：基于Ubuntu系统，采用Pygame框架开发康复训练软件，包含：
-                                        <ul>
-                                            <li>游戏化康复训练模块（三种训练模式），通过趣味交互提升患者依从性；</li>
-                                            <li>账号管理系统（支持多用户数据隔离），基于sqlite3数据库实现用户数据存储与管理；</li>
-                                            <li>数据导出功能，支持训练数据以CSV格式导出，便于临床分析与康复评估。</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>项目成果</strong>：
-                        <ul>
-                            <li>申请发明专利1项，软件著作权1项；</li>
-                            <li>实现轻量化机械结构与多模态传感器融合的硬件系统；</li>
-                            <li>完成从硬件控制到康复软件的全链路开发，形成一体化康复解决方案。</li>
-                        </ul>
-                    </li>
-                </ul>
+        <!-- 科研课题 -->
+        <section class="mb-8">
+            <h2 class="section-title"><i class="fa fa-flask mr-2"></i>科研课题</h2>
+            
+            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                <div class="flex flex-wrap justify-between items-start mb-3">
+                    <h3 class="item-title">轻量化电机直驱踝关节康复外骨骼系统开发</h3>
+                    <span class="item-subtitle">2024.12-2025.3 | 研究生课题</span>
+                </div>
+                <p class="text-sm mb-3">对接西部多家医院需求，旨在设计兼具轻量化、功能性与用户友好性的踝关节康复外骨骼系统。</p>
+                
+                <div class="mb-3">
+                    <h4 class="font-medium text-gray-900 mb-1">核心开发内容</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div>
+                            <h5 class="font-medium text-gray-800 text-sm mb-1">硬件设计</h5>
+                            <ul class="list-disc pl-5 text-sm space-y-1">
+                                <li>选用高功率密度电机，采用碳纤维与尼龙材质，实现整机重量仅600g的可穿戴步行助力外骨骼结构。</li>
+                                <li>集成多模态生物信号采集模块：包含IMU、sEMG、FSR，支持实时生理数据采集。</li>
+                                <li>人因工程优化：腿部护托高度可调，足托采用内衬于鞋内的适配方案，覆盖6岁以上群体穿戴需求。</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-gray-800 text-sm mb-1">软件开发</h5>
+                            <ul class="list-disc pl-5 text-sm space-y-1">
+                                <li>嵌入式系统：完成外骨骼电路设计与嵌入式软件开发，实现硬件设备的驱动与数据交互。</li>
+                                <li>图形化康复平台：基于Ubuntu系统，采用Pygame框架开发康复训练软件，包含游戏化训练模块、账号管理系统和数据导出功能。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-medium text-gray-900 mb-1">项目成果</h4>
+                    <ul class="list-disc pl-5 text-sm space-y-1">
+                        <li>申请发明专利1项，软件著作权1项；</li>
+                        <li>实现轻量化机械结构与多模态传感器融合的硬件系统；</li>
+                        <li>完成从硬件控制到康复软件的全链路开发，形成一体化康复解决方案。</li>
+                    </ul>
+                </div>
             </div>
-
-            <div>
-                <h3>基于气压驱动的仿生柔性管道机器人研发</h3>
-                <ul>
-                    <li><strong>时间</strong>：2021.1-2022.5</li>
-                    <li><strong>项目性质</strong>：国家级大创</li>
-                    <li><strong>项目介绍</strong>：针对现有管道机器人牵引力小、适应性弱、工作效率低及维护成本高等问题。本项目基于仿生蠕动机理，采用柔性驱动机构和模块化设计理念，设计出一种基于气压驱动的仿生柔性管道机器人系统。</li>
-                    <li><strong>承担工作</strong>：负责项目的方案设计；机器人研发上机构设计与力学仿真分析；气动系统搭建与测试；电控系统的搭建及机器人运动控制；比赛上答辩环节及参赛材料制作；协助导师撰写多篇论文与专利。</li>
-                    <li><strong>项目成果</strong>：研制工程样机2台；申请专利3项(2项发明，1项实用新型)；发表SCI二区论文1篇；“挑战杯”课外学术科技作品竞赛全国一等奖、中美青年创客大赛总决赛全国一等奖等诸多奖项。</li>
-                </ul>
+            
+            <div class="bg-gray-50 rounded-lg p-4">
+                <div class="flex flex-wrap justify-between items-start mb-3">
+                    <h3 class="item-title">基于气压驱动的仿生柔性管道机器人研发</h3>
+                    <span class="item-subtitle">2021.1-2022.5 | 国家级大创</span>
+                </div>
+                <p class="text-sm mb-3">针对现有管道机器人牵引力小、适应性弱、工作效率低及维护成本高等问题。本项目基于仿生蠕动机理，采用柔性驱动机构和模块化设计理念，设计出一种基于气压驱动的仿生柔性管道机器人系统。</p>
+                
+                <div class="mb-3">
+                    <h4 class="font-medium text-gray-900 mb-1">承担工作</h4>
+                    <p class="text-sm">负责项目的方案设计；机器人研发上机构设计与力学仿真分析；气动系统搭建与测试；电控系统的搭建及机器人运动控制；比赛上答辩环节及参赛材料制作；协助导师撰写多篇论文与专利。</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-medium text-gray-900 mb-1">项目成果</h4>
+                    <ul class="list-disc pl-5 text-sm space-y-1">
+                        <li>研制工程样机2台；</li>
+                        <li>申请专利3项(2项发明，1项实用新型)；</li>
+                        <li>发表SCI二区论文1篇；</li>
+                        <li>“挑战杯”课外学术科技作品竞赛全国一等奖、中美青年创客大赛总决赛全国一等奖等诸多奖项。</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="section">
-        <h2>项目经历</h2>
-        <div class="experience-list">
-            <div>
-                <h3>脑瘫儿童踝足矫形器设计优化与改进</h3>
-                <ul>
-                    <li><strong>时间</strong>：2024.4-2024.10</li>
-                    <li><strong>项目性质</strong>：研究生横向课题</li>
-                    <li><strong>项目介绍</strong>：对接四川某医院需求，对脑瘫儿童踝足矫形器进行改进，主要解决足托穿戴不合适、穿戴设备进行训练过重、仅支持单侧踝足训练、电池续航有限等问题。6个月工期完成结构设计和生成组装成功交付任务。</li>
-                    <li><strong>项目成果</strong>：
-                        <ul>
-                            <li>设计可调节伸缩足托(18cm~23cm)解决足托尺寸问题，寻找厂家定制软布包裹提升穿戴舒适度。</li>
-                            <li>设计坐姿固定支架来分担设备重量解决过重问题，并同时支持双侧足部同步训练。</li>
-                            <li>固定支架集成AC220V转DC电源解决续航有限问题，内部采用隐藏中空走线机构保证美观。</li>
+        <!-- 项目经历 -->
+        <section class="mb-8">
+            <h2 class="section-title"><i class="fa fa-folder-open mr-2"></i>项目经历</h2>
+            
+            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                <div class="flex flex-wrap justify-between items-start mb-3">
+                    <h3 class="item-title">脑瘫儿童踝足矫形器设计优化与改进</h3>
+                    <span class="item-subtitle">2024.4-2024.10 | 研究生横向课题</span>
+                </div>
+                <p class="text-sm mb-3">对接四川某医院需求，对脑瘫儿童踝足矫形器进行改进，主要解决足托穿戴不合适、穿戴设备进行训练过重、仅支持单侧踝足训练、电池续航有限等问题。6个月工期完成结构设计和生成组装成功交付任务。</p>
+                
+                <div>
+                    <h4 class="font-medium text-gray-900 mb-1">项目成果</h4>
+                    <ul class="list-disc pl-5 text-sm space-y-1">
+                        <li>设计可调节伸缩足托(18cm~23cm)解决足托尺寸问题，寻找厂家定制软布包裹提升穿戴舒适度。</li>
+                        <li>设计坐姿固定支架来分担设备重量解决过重问题，并同时支持双侧足部同步训练。</li>
+                        <li>固定支架集成AC220V转DC电源解决续航有限问题，内部采用隐藏中空走线机构保证美观。</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                <div class="flex flex-wrap justify-between items-start mb-3">
+                    <h3 class="item-title">基于Linux的轻量级Web服务器开发</h3>
+                    <span class="item-subtitle">2024.6-2024.9 | 独立开发</span>
+                </div>
+                <p class="text-sm mb-3">本项目基于C/C++在Linux系统下开发了轻量级Web服务器，使用线程池、epoll和Proactor模式处理并发事件，支持浏览器的GET和POST请求，可以访问服务器的图片和视频等资源。</p>
+                
+                <div>
+                    <h4 class="font-medium text-gray-900 mb-1">项目成果</h4>
+                    <ul class="list-disc pl-5 text-sm space-y-1">
+                        <li>利用互斥锁、条件变量、信号量实现了线程同步，设计半同步/半反应堆的线程池，提高了运行效率。</li>
+                        <li>利用epoll技术实现I/O多路复用，并使用有限状态机解析HTTP请求报文，支持GET、POST请求。</li>
+                        <li>使用SIGALRM信号定期关闭非活动连接，利用管道通知主循环，进而对升序链表定时器进行处理。</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-stack">
+                    <i class="fa fa-code mr-1"></i> 技术栈：C++、线程池、epoll、Socket通信、Linux、MySQL
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-4">
+                <div class="flex flex-wrap justify-between items-start mb-3">
+                    <h3 class="item-title">基于Linux的分布式性能分析监控系统开发</h3>
+                    <span class="item-subtitle">2024.10-2024.12 | 独立开发</span>
+                </div>
+                <p class="text-sm mb-3">本项目基于C++在Linux系统上开发了分布式性能分析监控系统，结合Docker、gRPC、Protobuf和Qt，实现跨平台部署与高效性能监控，能够实时监控服务器的CPU状态、系统负载、内存使用、网络状态等性能指标。</p>
+                
+                <div>
+                    <h4 class="font-medium text-gray-900 mb-1">项目成果</h4>
+                    <ul class="list-disc pl-5 text-sm space-y-1">
+                        <li>采用Docker+CMake实现容器化部署，通过gRPC构建服务端-客户端架构。</li>
+                        <li>基于Protobuf序列化传输数据，实现CPU/内存/网络等性能指标实时采集。</li>
+                        <li>结合Qt开发可视化界面，动态刷新监控数据，支持stress工具压测验证。</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-stack">
+                    <i class="fa fa-code mr-1"></i> 技术栈：C++、C++常用特性、Docker、gRPC、Protobuf、CMake、Qt
+                </div>
+            </div>
+        </section>
+
+        <!-- 科研成果 -->
+        <section>
+            <h2 class="section-title"><i class="fa fa-file-text-o mr-2"></i>科研成果</h2>
+            
+            <div class="space-y-3">
+                <div class="flex items-start">
+                    <i class="fa fa-trophy text-yellow-500 mt-1 mr-2"></i>
+                    <div>
+                        <p class="font-medium">国家级大学生创新训练计划项目</p>
+                        <p class="text-sm text-gray-600">基于气压驱动的仿生柔性管道机器人研发，排名第一。</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <i class="fa fa-book text-blue-500 mt-1 mr-2"></i>
+                    <div>
+                        <p class="font-medium">论文</p>
+                        <p class="text-sm text-gray-600">《A Novel Worm-like In-Pipe Robot with the Rigid and Soft Structure》，发表于《Journal of Bionic Engineering》，排名第三。</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <i class="fa fa-globe text-indigo-500 mt-1 mr-2"></i>
+                    <div>
+                        <p class="font-medium">专利</p>
+                        <ul class="list-disc pl-5 text-sm space-y-1 mt-1">
+                            <li>一种柔性驱动的主动转向型管道机器人，发明专利（公开），排名第一。</li>
+                            <li>一种管道机器人的可感知型柔性支撑机构，实用新型（授权），排名第一。</li>
+                            <li>其他专利：共申请专利4项（3项发明、1项实用新型）。</li>
                         </ul>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <div>
-                <h3>基于Linux的轻量级Web服务器开发</h3>
-                <ul>
-                    <li><strong>时间</strong>：2024.6-2024.9</li>
-                    <li><strong>项目性质</strong>：独立开发</li>
-                    <li><strong>项目介绍</strong>：本项目基于C/C++在Linux系统下开发了轻量级Web服务器，使用线程池、epoll和Practor模式处理并发事件，支持浏览器的GET和POST请求，可以访问服务器的图片和视频等资源。</li>
-                    <li><strong>项目成果</strong>：
-                        <ul>
-                            <li>利用互斥锁、条件变量、信号量实现了线程同步，设计半同步/半反应堆的线程池，提高了运行效率。</li>
-                            <li>利用epoll技术实现I/O多路复用，并使用有限状态机解析HTTP请求报文，支持GET、POST请求。</li>
-                            <li>使用SIGALRM信号定期关闭非活动连接，利用管道通知主循环，进而对升序链表定时器进行处理。</li>
-                        </ul>
-                    </li>
-                    <li class="tech-stack"><strong>技术栈</strong>：C++、线程池、epoll、Socket通信、Linux、MySQL。</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>基于Linux的分布式性能分析监控系统开发</h3>
-                <ul>
-                    <li><strong>时间</strong>：2024.10-2024.12</li>
-                    <li><strong>项目性质</strong>：独立开发</li>
-                    <li><strong>项目介绍</strong>：本项目基于C++在Linux系统上开发了分布式性能分析监控系统，结合Docker、gRPC、Protobuf和Qt，实现跨平台部署与高效性能监控，能够实时监控服务器的CPU状态、系统负载、内存使用、网络状态等性能指标。</li>
-                    <li><strong>项目成果</strong>：
-                        <ul>
-                            <li>采用Docker+CMake实现容器化部署，通过gRPC构建服务端-客户端架构。</li>
-                            <li>基于Protobuf序列化传输数据，实现CPU/内存/网络等性能指标实时采集。</li>
-                            <li>结合Qt开发可视化界面，动态刷新监控数据，支持stress工具压测验证。</li>
-                        </ul>
-                    </li>
-                    <li class="tech-stack"><strong>技术栈</strong>：C++、C++常用特性、Docker、gRPC、Protobuf、CMake、Qt。</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>科研成果</h2>
-        <ul class="info-list">
-            <li><strong>国家级大学生创新训练计划项目</strong>：基于气压驱动的仿生柔性管道机器人研发，排名第一。</li>
-            <li><strong>论文</strong>：《A Novel Worm-like In-Pipe Robot with the Rigid and Soft Structure》，发表于《Journal of Bionic Engineering》，排名第三。</li>
-            <li><strong>专利</strong>：
-                <ul>
-                    <li>一种柔性驱动的主动转向型管道机器人，发明专利（公开），排名第一。</li>
-                    <li>一种管道机器人的可感知型柔性支撑机构，实用新型（授权），排名第一。</li>
-                    <li>其他专利：共申请专利4项（3项发明、1项实用新型）。</li>
-                </ul>
-            </li>
-            <li><strong>国际会议论文</strong>：1篇。</li>
-        </ul>
-    </div>
+    <footer class="text-center text-gray-500 text-sm mt-6">
+        <p>© 2025 吴俊然个人简历 | 最后更新：2025年6月9日</p>
+    </footer>
 </body>
 </html>
