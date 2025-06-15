@@ -91,60 +91,78 @@
 
     <!-- 主要内容区 - 添加顶部边距以避免被导航栏遮挡 -->
     <main class="bg-white rounded-lg shadow-md p-6 mt-20">
-        <!-- 基本信息 -->
+        <!-- 基本信息与教育经历合并 -->
         <section class="mb-8">
             <h2 class="section-title"><i class="fa fa-user mr-2"></i>基本信息</h2>
-            <div class="flex flex-col md:flex-row md:justify-between flex-wrap gap-2 md:gap-x-6 px-0 md:px-20">
-                <div class="info-row !mb-0">
-                    <span>电话：<a href="tel:17855241759" class="text-primary hover:underline">17855241759</a>（微信同号）</span>
-                </div>
-                <div class="info-row !mb-0">
-                    <span>邮箱：<a href="mailto:wujunran3424@163.com" class="text-primary hover:underline">wujunran3424@163.com</a></span>
-                </div>
-            </div>
-        </section>
-
-        <!-- 教育经历 -->
-        <section class="mb-8">
-            <h2 class="section-title"><i class="fa fa-graduation-cap mr-2"></i>教育经历</h2>
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">时间</th>
-                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">院校</th>
-                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">专业</th>
-                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">学历</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <tr>
-                            <td class="px-4 py-3 text-sm">2023.09-2026.06</td>
-                            <td class="px-4 py-3 text-sm">天津大学</td>
-                            <td class="px-4 py-3 text-sm">电子信息</td>
-                            <td class="px-4 py-3 text-sm">硕士</td>
-                        </tr>
-                        <tr>
-                            <td class="px-4 py-3 text-sm">2019.09-2023.06</td>
-                            <td class="px-4 py-3 text-sm">天津科技大学</td>
-                            <td class="px-4 py-3 text-sm">机械电子工程</td>
-                            <td class="px-4 py-3 text-sm">本科</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- 专业排名和英语水平部分 -->
-            <div class="flex flex-col md:flex-row md:justify-between flex-wrap gap-2 md:gap-x-6 px-0 md:px-40">
-                <div class="flex items-center">
-                    <i class="fa fa-trophy text-yellow-500 mr-1"></i>
-                    <span class="text-sm">专业排名: 1/140(本科)</span>
-                </div>
-                <div class="flex items-center" style="cursor: pointer;">
-                    <a href="images/CET-4andCET-6.webp" target="_blank" rel="noopener noreferrer" 
-                    style="color: inherit; text-decoration: none; display: flex; align-items: center;">
-                        <i class="fa fa-language text-blue-500 mr-1"></i>
-                        <span class="text-sm">英语水平: 通过CET-4与CET-6</span>
-                    </a>
+            
+            <div class="bg-gray-50 rounded-xl shadow-sm p-4 md:p-6">
+                <!-- 移动端与桌面端布局切换 -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    
+                    <!-- 证件照 -->
+                    <div class="w-full md:w-48 flex-shrink-0 flex items-center"> <!-- 添加flex和items-center实现垂直居中 -->
+                        <div class="rounded-lg overflow-hidden shadow-md aspect-[3/4] w-full"> <!-- 添加w-full确保移动端正常显示 -->
+                            <img src="images/证件照.webp" alt="吴俊然证件照" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <!-- 信息内容 -->
+                    <div class="w-full">
+                        <!-- 联系信息 -->
+                        <div class="mb-4">
+                            <h3 class="font-bold text-gray-900 text-lg mb-2">个人信息</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-0.5"> <!-- 添加mt-0.5微调图标位置 -->
+                                        <i class="fa fa-phone text-primary"></i>
+                                    </div>
+                                    <span class="ml-2">电话：<a href="tel:17855241759" class="text-primary hover:underline">17855241759</a></span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-0.5"> <!-- 添加mt-0.5微调图标位置 -->
+                                        <i class="fa fa-envelope text-primary"></i>
+                                    </div>
+                                    <span class="ml-2">邮箱：<a href="mailto:wujunran3424@163.com" class="text-primary hover:underline">wujunran3424@163.com</a></span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-0.5"> <!-- 添加mt-0.5微调图标位置 -->
+                                        <i class="fa fa-graduation-cap text-primary"></i>
+                                    </div>
+                                    <span class="ml-2">学历：硕士</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-0.5"> <!-- 添加mt-0.5微调图标位置 -->
+                                        <i class="fa fa-language text-blue-500"></i>
+                                    </div>
+                                    <span class="ml-2">英语水平：<a href="images/CET-4andCET-6.webp" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">CET-4/CET-6</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 教育经历 -->
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-lg mb-2">教育经历</h3>
+                            <div class="space-y-3">
+                                <!-- 硕士 -->
+                                <div class="bg-white p-3 rounded-lg shadow-sm border-l-4 border-primary">
+                                    <div class="flex flex-wrap justify-between items-start">
+                                        <h4 class="font-semibold text-sm">天津大学</h4>
+                                        <span class="text-xs text-gray-500">2023.09-2026.06</span>
+                                    </div>
+                                    <p class="text-xs text-gray-700">电子信息 | 硕士 | 保研</p>
+                                </div>
+                                
+                                <!-- 本科 -->
+                                <div class="bg-white p-3 rounded-lg shadow-sm border-l-4 border-primary">
+                                    <div class="flex flex-wrap justify-between items-start">
+                                        <h4 class="font-semibold text-sm">天津科技大学</h4>
+                                        <span class="text-xs text-gray-500">2019.09-2023.06</span>
+                                    </div>
+                                    <p class="text-xs text-gray-700">机械电子工程 | 本科 | 专业排名：1/140</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -156,42 +174,54 @@
                 <li class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div>
-                        <span class="font-medium">第十七届“挑战杯”大学生课外学术科技作品竞赛全国一等奖</span>
+                        <a href="certificates.html" class="hover:text-primary transition-colors">
+                            <span class="font-medium">第十七届“挑战杯”大学生课外学术科技作品竞赛全国一等奖</span>
+                        </a>
                         <span class="text-sm text-gray-500 ml-2">（国家级，排名第一）</span>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div>
-                        <span class="font-medium">第八届中国国际“互联网+”大学生创新创业大赛全国金奖、全国银奖</span>
+                        <a href="certificates.html" class="hover:text-primary transition-colors">
+                            <span class="font-medium">第八届中国国际“互联网+”大学生创新创业大赛全国金奖、全国银奖</span>
+                        </a>
                         <span class="text-sm text-gray-500 ml-2">（排名第一）</span>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div>
-                        <span class="font-medium">2021中美青年创客大赛总决赛全国一等奖</span>
+                        <a href="certificates.html" class="hover:text-primary transition-colors">
+                            <span class="font-medium">2021中美青年创客大赛总决赛全国一等奖</span>
+                        </a>
                         <span class="text-sm text-gray-500 ml-2">（国家级，排名第二）</span>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div>
-                        <span class="font-medium">全国大学生数学建模竞赛天津市二等奖</span>
+                        <a href="certificates.html" class="hover:text-primary transition-colors">
+                            <span class="font-medium">全国大学生数学建模竞赛天津市二等奖</span>
+                        </a>
                         <span class="text-sm text-gray-500 ml-2">（省部级，排名第二）</span>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div>
-                        <span class="font-medium">中国大学生自强之星</span>
+                        <a href=" https://news.cyol.com/gb/articles/2022-11/15/content_09WK3hvQB.html" class="hover:text-primary transition-colors">
+                            <span class="font-medium">中国大学生自强之星</span>
+                        </a>
                         <span class="text-sm text-gray-500 ml-2">（国家级荣誉称号，2021）</span>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div>
-                        <span class="font-medium">天津市王克昌文化科技创新奖</span>
+                        <a href="certificates.html" class="hover:text-primary transition-colors">
+                            <span class="font-medium">天津市王克昌文化科技创新奖</span>
+                        </a>
                         <span class="text-sm text-gray-500 ml-2">（2021）</span>
                     </div>
                 </li>
@@ -203,20 +233,20 @@
             <h2 class="section-title"><i class="fa fa-cogs mr-2"></i>专业技能</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <h3 class="font-medium text-gray-900 mb-2">机械设计软件</h3>
+                    <h3 class="font-bold text-gray-900 mb-2">编程语言</h3>
+                    <p class="text-sm text-gray-700">熟悉C/C++/Python等编程语言，了解C++类的封装继承多态、C++11新特性、STL常用容器，了解Python, Java。</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-2">软件开发</h3>
+                    <p class="text-sm text-gray-700">熟悉Linux操作系统、shell、git等，具备MySQL和Redis的基础使用能力，了解数据库操作；熟悉操作系统进程、线程等，熟悉计算机网络模型，了解HTTP、TCP协议。</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-2">机械设计软件</h3>
                     <p class="text-sm text-gray-700">熟练使用Creo，SolidWorks，AutoCAD等，具有机械设计的相关知识。</p>
                 </div>
                 <div>
-                    <h3 class="font-medium text-gray-900 mb-2">有限元分析软件</h3>
+                    <h3 class="font-bold text-gray-900 mb-2">有限元分析软件</h3>
                     <p class="text-sm text-gray-700">熟悉使用ABAQUS，Ansys等，可对零部件结构进行力学分析及结构优化。</p>
-                </div>
-                <div>
-                    <h3 class="font-medium text-gray-900 mb-2">编程语言</h3>
-                    <p class="text-sm text-gray-700">熟悉C/C++/Python等编程语言，了解C++类的封装继承多态、C++11新特性、STL常用容器，了解Java。</p>
-                </div>
-                <div>
-                    <h3 class="font-medium text-gray-900 mb-2">软件开发</h3>
-                    <p class="text-sm text-gray-700">熟悉Linux操作系统、shell、git等，具备MySQL和Redis的基础使用能力，了解数据库操作；熟悉操作系统进程、线程等，熟悉计算机网络模型，了解HTTP、TCP协议。</p>
                 </div>
             </div>
         </section>
