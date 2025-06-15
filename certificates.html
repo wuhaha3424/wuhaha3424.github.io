@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获奖证书</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36D399',
+                        neutral: '#6B7280',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .certificate-shadow {
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+            .certificate-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .certificate-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">获奖证书展示</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">首页</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">证书列表</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-primary transition-colors duration-200">关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fa fa-trophy text-yellow-500 mr-2"></i>国家级奖项
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden certificate-shadow certificate-hover">
+                    <a href="images/挑战杯全国一等奖.jpg" target="_blank" class="block">
+                        <img src="images/挑战杯全国一等奖.jpg" alt="挑战杯全国一等奖证书" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">挑战杯全国一等奖</h3>
+                            <p class="text-gray-600 text-sm">全国大学生课外学术科技作品竞赛</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden certificate-shadow certificate-hover">
+                    <a href="images/互联网+全国金奖.jpg" target="_blank" class="block">
+                        <img src="images/互联网+全国金奖.jpg" alt="互联网+全国金奖证书" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">互联网+全国金奖</h3>
+                            <p class="text-gray-600 text-sm">中国国际"互联网+"大学生创新创业大赛</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden certificate-shadow certificate-hover">
+                    <a href="images/互联网+全国银奖.jpg" target="_blank" class="block">
+                        <img src="images/互联网+全国银奖.jpg" alt="互联网+全国银奖证书" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">互联网+全国银奖</h3>
+                            <p class="text-gray-600 text-sm">中国国际"互联网+"大学生创新创业大赛</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden certificate-shadow certificate-hover">
+                    <a href="images/中美青年创客国赛一等奖.jpg" target="_blank" class="block">
+                        <img src="images/中美青年创客国赛一等奖.jpg" alt="中美青年创客国赛一等奖证书" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">中美青年创客国赛一等奖</h3>
+                            <p class="text-gray-600 text-sm">中美青年创客大赛全国总决赛</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden certificate-shadow certificate-hover">
+                    <a href="images/大创年会最佳创意项目.jpg" target="_blank" class="block">
+                        <img src="images/大创年会最佳创意项目.jpg" alt="大创年会最佳创意项目证书" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">大创年会最佳创意项目</h3>
+                            <p class="text-gray-600 text-sm">国家级大学生创新创业训练计划年会</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden certificate-shadow certificate-hover">
+                    <a href="images/大创结题证书.jpg" target="_blank" class="block">
+                        <img src="images/大创结题证书.jpg" alt="大创结题证书" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">国家级大学生创新训练计划</h3>
+                            <p class="text-gray-600 text-sm">优秀结项证书</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fa fa-star text-blue-500 mr-2"></i>省市级奖项
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden certificate-shadow certificate-hover">
+                    <a href="images/数学建模竞赛天津市二等奖.jpg" target="_blank" class="block">
+                        <img src="images/数学建模竞赛天津市二等奖.jpg" alt="数学建模竞赛天津市二等奖证书" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">数学建模竞赛天津市二等奖</h3>
+                            <p class="text-gray-600 text-sm">全国大学生数学建模竞赛天津赛区</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden certificate-shadow certificate-hover">
+                    <a href="images/天津市王克昌文化科技创新奖.jpg" target="_blank" class="block">
+                        <img src="images/天津市王克昌文化科技创新奖.jpg" alt="天津市王克昌文化科技创新奖证书" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">天津市王克昌文化科技创新奖</h3>
+                            <p class="text-gray-600 text-sm">天津市优秀大学生科技创新奖励</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-xl font-bold mb-2">获奖证书展示</h2>
+                    <p class="text-gray-400 text-sm">展示学术与竞赛成果</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>© 2025 吴俊然 | 最后更新：2025年6月15日</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 图片加载失败处理
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('error', function() {
+                    this.src = 'https://picsum.photos/800/600?random=' + Math.random();
+                    this.alt = '证书图片加载失败，显示随机图片';
+                });
+            });
+        });
+    </script>
+</body>
+</html>    
